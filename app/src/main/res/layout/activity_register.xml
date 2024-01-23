@@ -65,7 +65,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:paddingStart="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
@@ -134,7 +134,7 @@
         app:layout_constraintTop_toBottomOf="@id/editTextReEmail" />
 
     <TextView
-        android:id="@+id/textViewNewUser"
+        android:id="@+id/textViewExitstingUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
