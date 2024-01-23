@@ -40,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String pass = edtPassword.getText().toString();
                 String email = edtEmail.getText().toString();
                 String confirm = edtConfirm.getText().toString();
+                Database db = new Database(getApplicationContext(),"healthcare",null,1);
                 if (username.isEmpty()&&pass.isEmpty()&&email.isEmpty()&&confirm.isEmpty()){
                     Toast.makeText(getApplicationContext(),"Vui lòng nhập đủ thông tin!",Toast.LENGTH_SHORT).show();
                     edtUsername.requestFocus();;
@@ -56,7 +57,9 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if(confirm.isEmpty() || !confirm.equals(pass)){
                     Toast.makeText(getApplicationContext(), "Mật khẩu không đúng !", Toast.LENGTH_SHORT).show();
                 } else {
+                    db.register(username,email,pass);
                     Toast.makeText(getApplicationContext(), "Tạo thành công !", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                 }
 
             }
