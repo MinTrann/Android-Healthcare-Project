@@ -93,6 +93,12 @@ public class LabTestActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+        btnGoToCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LabTestActivity.this,CartLabActivity.class));
+            }
+        });
     }
 
 

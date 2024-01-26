@@ -63,6 +63,20 @@ public class BookAppoinmentActivity extends AppCompatActivity {
                 datePickerDiaLog.show();
             }
         });
+        initTimePicker();
+        timeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                timePickerDialog.show();
+            }
+        });
+
+        dateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datePickerDiaLog.show();
+            }
+        });
             btnBack.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
